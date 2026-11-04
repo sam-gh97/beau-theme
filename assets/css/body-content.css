@@ -1,0 +1,209 @@
+/* Body content defaults
+   - Lightweight, non-opinionated spacing and media handling for post bodies
+*/
+
+.body-content {
+    line-height: 29px;
+    font-size: 19px;
+    color: var(--color-primary);
+  }
+  
+  .body-content p,
+  .body-content ul,
+  .body-content ol,
+  .body-content blockquote,
+  .body-content pre,
+  .body-content figure {
+    margin-bottom: 1rem;
+  }
+  
+  .body-content p small {
+    display: inline-block;
+    line-height: 1.6;
+  }
+  
+  .body-content ul li {
+    display: list-item;
+    list-style: disc;
+    margin-left: 1rem;
+  }
+  
+  .body-content img,
+  .body-content video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .body-content iframe {
+    max-width: 100%;
+  }
+  
+  .body-content table {
+    width: 100%;
+    margin-bottom: 16px;
+    border-collapse: collapse;
+    color: var(--color-primary);
+  }
+  
+  .body-content table a {
+    text-decoration: underline !important;
+  }
+  
+  .body-content table th,
+  .body-content table td {
+    padding: 10px 16px;
+    position: relative;
+  }
+  
+  .body-content table th:first-child,
+  .body-content table td:first-child {
+    padding-left: 0;
+  }
+  
+  .body-content table tr + tr th,
+  .body-content table tr + tr td {
+    border-top: 1px solid var(--color-primary-100);
+  }
+  
+  .body-content table th + th::before,
+  .body-content table td + td::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px;
+    background: var(--color-primary-100);
+  }
+  
+  
+  .body-content hr {
+      border-color: var(--color-dark-gray);
+      margin: 1.5rem 0;
+  }
+  
+  .body-content ul { list-style: disc inside; }
+  .body-content ol { list-style: decimal inside; }
+  
+  .body-content h1 {
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 400;
+    margin: 1.75rem auto 1rem;
+  }
+  
+  .body-content h2 {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 400;
+    font-family: "linotype-didot", serif;
+    margin: 1.5rem auto 0.75rem;
+  }
+  
+  .body-content h3 {
+    font-size: 28px;
+    line-height: 41px;
+    font-weight: 400;
+    font-family: "linotype-didot", serif;
+    margin: 1.25rem auto 0.5rem;
+  }
+  
+  .body-content h4 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    font-family: "linotype-didot", serif;
+    margin: 1rem auto 0.5rem;
+  }
+  
+  .body-content h5,
+  .body-content h6 {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    font-family: "linotype-didot", serif;
+    margin: 1rem auto 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .body-content h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    
+    .body-content h2 {
+      font-size: 26px;
+      line-height: 34px;
+    }
+    
+    .body-content h3 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    
+    .body-content h4 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    
+    .body-content h5,
+    .body-content h6 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  
+  
+  /* Inline links styling */
+  .body-content a {
+    text-decoration: underline !important;
+    /* font-weight: 600; */
+  }
+  
+  .body-content a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .body-content a:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+  }
+  
+  .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+    padding-left: 0px !important;
+  }
+  
+  .wp-block-media-text:not(.has-media-on-the-right) .wp-block-media-text__content {
+    padding-right: 0px !important;
+  }
+  
+  @media (max-width: 768px) {
+    
+    .wp-block-media-text .wp-block-media-text__content {
+      margin-top: 20px;
+      padding-right: 0px !important;
+      padding-left: 0px !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .wp-block-media-text.is-stacked-on-mobile {
+      grid-template-columns: 1fr !important;
+    }
+  
+    .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media {
+      grid-column: 1 !important;
+    }
+  }
+  
+  .wp-block-image.size-full img {
+    width: 100%;
+    height: auto;
+  }
+  
+
+  .wp-element-caption {
+    text-align: center;
+  }

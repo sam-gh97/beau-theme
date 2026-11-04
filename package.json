@@ -1,0 +1,22 @@
+{
+  "name": "benchmark-boilerplate",
+  "version": "1.0.0",
+  "description": "Wordpress theme boilerplate",
+  "main": "app.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "author": "Sam Mills",
+  "license": "ISC",
+  "dependencies": {
+    "@fancyapps/ui": "^6.1.6",
+    "@tailwindcss/vite": "^4.1.11",
+    "alpinejs": "^3.14.9",
+    "gsap": "^3.13.0",
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.0.4"
+  }
+}

@@ -1,0 +1,845 @@
+@import "tailwindcss";
+
+@theme {
+
+    --font-futura-pt: "futura-pt", sans-serif;
+    --font-optima: optima-lt-pro, sans-serif;
+
+    /* Primary Colors */
+    --color-primary-25: #FFFFFE;
+    --color-primary-50: #FEFEFD;
+    --color-primary-100: #FDFDFA;
+    --color-primary-200: #FCFCF7;
+    --color-primary-300: #FAFAF4;
+    --color-primary-400: #F9F9F1;
+    --color-primary-500: #F8F8EE;
+    --color-primary-600: #E2E2D9;
+    --color-primary-700: #B0B0A9;
+    --color-primary-800: #888883;
+    --color-primary-900: #686864;
+
+    /* Secondary Colors */
+    --color-secondary-25: #FFFEFD;
+    --color-secondary-50: #FDF9F7;
+    --color-secondary-100: #FAEDE7;
+    --color-secondary-200: #F8E4DB;
+    --color-secondary-300: #F4D7CA;
+    --color-secondary-400: #F2D0C0;
+    --color-secondary-500: #EFC4B0;
+    --color-secondary-600: #D9B2A0;
+    --color-secondary-700: #AA8B7D;
+    --color-secondary-800: #836C61;
+    --color-secondary-900: #64524A;
+
+    /* Tertiary Colors */
+    --color-tertiary-25: #FBF5F5;
+    --color-tertiary-50: #F0E6E6;
+    --color-tertiary-200: #B88B8B;
+    --color-tertiary-300: #975555;
+    --color-tertiary-400: #833535;
+    --color-tertiary-500: #640202;
+    --color-tertiary-600: #5B0202;
+    --color-tertiary-700: #470101;
+    --color-tertiary-800: #370101;
+    --color-tertiary-900: #2A0101;
+
+    /* Neutral Colors */
+    --color-neutral-25: #F9F9F9;
+    --color-neutral-50: #F2F2F2;
+    --color-neutral-100: #D8D8D8;
+    --color-neutral-200: #C5C5C5;
+    --color-neutral-300: #AAAAAA;
+    --color-neutral-400: #999999;
+    --color-neutral-500: #808080;
+    --color-neutral-600: #747474;
+    --color-neutral-700: #5B5B5B;
+    --color-neutral-800: #464646;
+    --color-neutral-900: #363636;
+    --color-neutral-black: #000000;
+    --color-neutral-white: #FFFFFF;
+
+    --color-error-500: #EA424F;
+
+    --color-alt-red: #EFC4B0;
+
+    --spacing-0: 0px;
+    --spacing-1: 0px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 24px;
+    --spacing-6: 32px;
+    --spacing-7: 48px;
+    --spacing-8: 64px;
+    --spacing-9: 100px;
+    --spacing-10: 120px;
+
+    --breakpoint-xs: 480px;
+    --breakpoint-xl: 1199px;
+}
+
+@media (max-width: 1024px) {
+    :root {
+      --spacing-1: 0px;
+      --spacing-2: 8px;
+      --spacing-3: 12px;
+      --spacing-4: 16px;
+      --spacing-5: 20px;
+      --spacing-6: 24px;
+      --spacing-7: 32px;
+      --spacing-8: 48px;
+      --spacing-9: 64px;
+      --spacing-10: 80px;
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+      --spacing-1: 0px;
+      --spacing-2: 4px;
+      --spacing-3: 8px;
+      --spacing-4: 12px;
+      --spacing-5: 16px;
+      --spacing-6: 20px;
+      --spacing-7: 24px;
+      --spacing-8: 32px;
+      --spacing-9: 40px;
+      --spacing-10: 50px;
+    }
+}
+
+@layer utilities {
+    /* Constrain normal blocks */
+    .wp-block-post-content > * {
+        max-width: var(--wp--style--global--content-size, 1150px);
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Wide alignment */
+    .wp-block-post-content > .alignwide {
+        max-width: var(--wp--style--global--wide-size, 1496px);
+    }
+
+    /* Full alignment */
+    .wp-block-post-content > .alignfull {
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    .wp-block {
+        max-width: var(--wp--style--global--content-size);
+    }
+
+    .wp-block[data-align="wide"] {
+        max-width: var(--wp--style--global--wide-size);
+    }
+
+    .wp-block[data-align="full"] {
+        max-width: none;
+    }
+
+    .anim-fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+      
+      
+      .anim-zoom {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+}
+
+/* Testimonials masonry */
+.testimonials-masonry-grid {
+    column-count: 3;
+    column-gap: var(--spacing-5);
+}
+
+.testimonials-masonry-grid .testimonial-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    display: inline-block;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .testimonials-masonry-grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .testimonials-masonry-grid {
+        column-count: 1;
+    }
+}
+
+body:not(.wp-admin) {
+    font-size: 19px;
+    line-height: 29px;
+    padding-top: 72px;
+    font-family: optima-lt-pro, sans-serif;
+    font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+    body:not(.wp-admin) {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    body:not(.wp-admin) {
+        font-size: 16px;
+        line-height: 26px;
+        padding-top: 44px;
+    }
+}
+
+/* Main Menu Styles - Parent Items (depth 0) */
+.main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu > li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Parent menu item links */
+.main-menu > li > a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-neutral-900);
+    transition: color 0.2s ease;
+    padding: var(--spacing-5) var(--spacing-4);
+}
+
+.main-menu > li > a:hover {
+    color: var(--color-neutral-700);
+    text-decoration: underline;
+}
+
+.main-menu > li.is-active > a,
+.main-menu > li > a.is-active {
+    color: var(--color-neutral-black);
+    font-weight: 500;
+}
+
+/* Parent items with dropdown */
+.main-menu > li.has-dropdown {
+    /* Add any specific styles for parent items with dropdowns here */
+}
+
+/* Chevron rotation on hover */
+.main-menu > li.has-dropdown:hover .menu-chevron {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Sub-Menu Container */
+.main-menu .sub-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background: var(--color-neutral-white);
+    border: 1px solid var(--color-neutral-200);
+    z-index: 1000;
+    padding: var(--spacing-4);
+    margin-top: var(--spacing-1);
+}
+
+.main-menu > li:hover > .sub-menu,
+.main-menu > li.has-dropdown:hover > .sub-menu {
+    display: block;
+}
+
+/* Sub-Menu Items (depth > 0) */
+.main-menu .sub-menu li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu .sub-menu li:not(:last-child) {
+    margin-bottom: var(--spacing-2);
+}
+
+/* Sub-Menu Links */
+.main-menu .sub-menu a {
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: none;
+    color: var(--color-neutral-900);
+    white-space: nowrap;
+}
+
+.main-menu .sub-menu a:hover {
+    text-decoration: underline;
+}
+
+.main-menu .sub-menu li.is-active > a,
+.main-menu .sub-menu a.is-active {
+    color: var(--color-neutral-black);
+    font-weight: 500;
+    background-color: var(--color-neutral-100);
+}
+
+/* Wishlist Icon Styles */
+.wishlist-link {
+    color: var(--color-neutral-black);
+    transition: color 0.2s ease;
+}
+
+.wishlist-link .wishlist-icon {
+    width: 22px;
+    height: 19px;
+    transition: fill 0.2s ease;
+}
+
+.wishlist-link .wishlist-path {
+    stroke: currentColor;
+    fill: none;
+    transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+.wishlist-link:hover .wishlist-path {
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+/* Footer Carousel Styles */
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.carousel-track {
+    display: inline-flex;
+    align-items: center;
+    animation: carousel-scroll 60s linear infinite;
+    font-family: "linotype-didot", serif;
+    font-size: 106px;
+    line-height: 106px;
+    white-space: nowrap;
+}
+
+.carousel-keyword {
+    display: inline-block;
+}
+
+.carousel-dot {
+    display: inline-block;
+    margin: 0 var(--spacing-7);
+    font-size: 60px;
+    line-height: 60px;
+}
+
+@keyframes carousel-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-track {
+        font-size: 64px;
+        line-height: 90px;
+    }
+
+    .carousel-dot {
+        font-size: 50px;
+        line-height: 50px;
+    }
+}
+
+/* Accordion Styles */
+.accordion-wrapper {
+    @apply mt-6;
+}
+
+.accordion-item {
+    @apply w-full;
+}
+
+.accordion-header {
+    @apply w-full flex items-center justify-between py-4 text-left cursor-pointer;
+    @apply transition-colors duration-200;
+}
+
+.accordion-header:hover {
+    @apply opacity-80;
+}
+
+.accordion-title {
+    @apply flex-1 font-semibold;
+}
+
+.accordion-chevron {
+    @apply transition-transform duration-200 flex-shrink-0 ml-4;
+    color: currentColor;
+}
+
+.accordion-item.is-open .accordion-chevron {
+    @apply rotate-180;
+}
+
+.accordion-content {
+    @apply overflow-hidden;
+}
+
+.accordion-body {
+    @apply pb-4;
+}
+
+.accordion-divider {
+    @apply border-t border-neutral-200;
+}
+
+/* Testimonial Slider */
+.testimonial-slider {
+    @apply w-full;
+}
+
+.testimonial-slider .swiper-wrapper {
+    @apply w-full;
+}
+
+.testimonial-slider .swiper-slide {
+    @apply w-full;
+    width: 100% !important;
+}
+
+/* Testimonial Navigation Buttons */
+.testimonial-nav-prev,
+.testimonial-nav-next {
+    @apply relative rounded-full border border-black flex items-center justify-center cursor-pointer transition-all;
+    background: transparent !important;
+    margin: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 48px !important;
+    height: 48px !important;
+    display: flex !important;
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Hide Swiper's default arrow icons */
+.testimonial-nav-prev::after,
+.testimonial-nav-next::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Hide any Swiper navigation icon elements */
+.testimonial-nav-prev .swiper-navigation-icon,
+.testimonial-nav-next .swiper-navigation-icon,
+.swiper-navigation-icon {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Style the SVG arrow icons */
+.testimonial-arrow-icon {
+    @apply w-4 h-4;
+    width: 16px !important;
+    height: 16px !important;
+    display: block !important;
+}
+
+.testimonial-arrow-prev {
+    transform: rotate(180deg);
+}
+
+.testimonial-nav-prev.swiper-button-disabled,
+.testimonial-nav-next.swiper-button-disabled {
+    @apply border-gray-300 opacity-50 cursor-not-allowed;
+    display: flex !important;
+    visibility: visible !important;
+}
+
+.testimonial-nav-prev.swiper-button-disabled::after,
+.testimonial-nav-next.swiper-button-disabled::after {
+    @apply text-gray-300;
+}
+
+/* Override Swiper's default button hiding */
+.swiper-button-prev.testimonial-nav-prev,
+.swiper-button-next.testimonial-nav-next {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.testimonial-nav-separator {
+    @apply w-px h-7 bg-black mx-5;
+}
+
+/* Product Slider Navigation */
+.product-nav-prev,
+.product-nav-next {
+    @apply absolute top-1/2 -translate-y-1/2 z-10 rounded-full border border-black flex items-center justify-center cursor-pointer transition-all;
+    background: transparent !important;
+    margin: 0 !important;
+    width: 48px !important;
+    height: 48px !important;
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.product-nav-prev {
+    left: -56px !important;
+}
+
+.product-nav-next {
+    right: -56px !important;
+}
+
+/* Hide Swiper's default arrow icons */
+.product-nav-prev::after,
+.product-nav-next::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Hide any Swiper navigation icon elements */
+.product-nav-prev .swiper-navigation-icon,
+.product-nav-next .swiper-navigation-icon {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Style the SVG arrow icons */
+.product-arrow-icon {
+    @apply w-4 h-4;
+    width: 16px !important;
+    height: 16px !important;
+    display: block !important;
+}
+
+.product-arrow-prev {
+    transform: rotate(180deg);
+}
+
+.product-nav-prev.swiper-button-disabled,
+.product-nav-next.swiper-button-disabled {
+    @apply border-gray-300 opacity-50 cursor-not-allowed;
+    display: flex !important;
+    visibility: visible !important;
+}
+
+.product-nav-prev.swiper-button-disabled::after,
+.product-nav-next.swiper-button-disabled::after {
+    @apply text-gray-300;
+}
+
+/* Override Swiper's default button hiding */
+.swiper-button-prev.product-nav-prev,
+.swiper-button-next.product-nav-next {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Compare Checkbox Styles */
+.compare-checkbox {
+    border: 1px solid black !important;
+    border-radius: 0 !important;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+}
+
+.compare-checkbox:checked {
+    background-color: black;
+    border-color: black;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10' fill='none'%3E%3Cpath d='M1 5L4.5 8.5L11 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px 10px;
+}
+
+/* Products Slider - Equal Height Slides */
+.products-slider .swiper-slide {
+    height: auto;
+    display: flex;
+}
+
+.products-slider .swiper-slide > * {
+    width: 100%;
+    flex: 1;
+}
+
+/* Pagination Styles */
+.pagination {
+    @apply w-full;
+}
+
+.pagination-container {
+    @apply flex items-center justify-center;
+    gap: 12px;
+}
+
+.pagination-link {
+    @apply flex items-center justify-center;
+    width: 32px;
+    height: 32px;
+    font-family: 'Optima', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-neutral-black, #000000);
+    text-decoration: none;
+    background-color: var(--color-neutral-white, #ffffff);
+    transition: opacity 0.2s ease;
+}
+
+.pagination-link:hover:not([aria-disabled="true"]) {
+    opacity: 0.7;
+}
+
+.pagination-link--current {
+    border: 1px solid var(--color-neutral-black, #000000);
+}
+
+.pagination-ellipsis {
+    @apply flex items-center justify-center;
+    width: 32px;
+    height: 32px;
+    font-family: 'Optima', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-neutral-black, #000000);
+    background-color: transparent;
+    border: none;
+    pointer-events: none;
+    user-select: none;
+}
+
+.pagination-chevron {
+    @apply flex items-center justify-center;
+    width: 32px;
+    height: 32px;
+    color: var(--color-neutral-black, #000000);
+}
+
+.pagination-chevron svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.pagination-link[aria-disabled="true"],
+.pagination-link.pagination-link--disabled {
+    opacity: 1;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.pagination-link[aria-disabled="true"] .pagination-chevron,
+.pagination-link.pagination-link--disabled .pagination-chevron {
+    color: var(--color-neutral-200, #C5C5C5);
+}
+
+/* Wishlist Styles */
+.wishlist-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.wishlist-btn svg path {
+    transition: fill 0.3s ease;
+}
+
+.wishlist-btn.in-wishlist svg path {
+    fill: black;
+}
+
+/* Wishlist Icon Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.wishlist-icon.pulse-animation {
+    animation: pulse 0.6s ease-in-out;
+}
+
+/* Wishlist Notification */
+.wishlist-notification {
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.wishlist-notification.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.hamburger-line {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: black;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+.hamburger-line:first-child {
+    top: 6px;
+}
+
+.hamburger-line:last-child {
+    top: 13px;
+}
+
+.hamburger-menu.active .hamburger-line:first-child {
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+.hamburger-menu.active .hamburger-line:last-child {
+    top: 10px;
+    transform: rotate(-45deg);
+}
+
+/* Banner Slider Styles */
+.banner-slider .swiper-wrapper {
+    align-items: stretch;
+}
+
+.banner-slider .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--spacing-5) var(--spacing-4);
+    height: auto;
+}
+
+.banner-slider .swiper-slide.bg-tertiary-500 {
+    background-color: var(--color-tertiary-500);
+    color: var(--color-neutral-white);
+}
+
+.banner-slider .swiper-slide.bg-alt-red {
+    background-color: var(--color-alt-red);
+    color: var(--color-neutral-black);
+}
+
+.banner-slider {
+    position: relative;
+}
+
+.banner-pagination {
+    position: absolute;
+    bottom: var(--spacing-3);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-1);
+    z-index: 50;
+    pointer-events: all;
+}
+
+.banner-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--color-neutral-white);
+    background: transparent;
+    border-radius: 50%;
+    opacity: 1;
+    margin: 0;
+    cursor: pointer;
+    pointer-events: all;
+    transition: background 0.3s ease;
+}
+
+.banner-pagination .swiper-pagination-bullet:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.banner-pagination .swiper-pagination-bullet-active {
+    background: var(--color-neutral-white);
+}
+
+.footer-menu li a:hover {
+    text-decoration: underline !important;
+}
+
+/* Post Card Image Hover Zoom Effect */
+.event-card .aspect-video img, .event-card .aspect-square img {
+    transition: transform 0.4s ease;
+}
+
+.event-card:has(a:hover) .aspect-video img, .event-card:has(a:hover) .aspect-square img {
+    transform: scale(1.1);
+}
+
+
+.images-slider .swiper-wrapper {
+    transition-timing-function: linear !important;
+    pointer-events: none;
+    user-select: none;
+}
+
+.images-slider .swiper-slide {
+    pointer-events: none;
+    user-select: none;
+}

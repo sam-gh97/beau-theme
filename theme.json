@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+      "layout": { "contentSize": "1160px", "wideSize": "1496px" },
+      "typography": {
+        "textDecoration": true,
+        "fontFamilies": [
+          {
+            "name": "Open Sans",
+            "slug": "open-sans",
+            "fontFamily": "\"Open Sans\", sans-serif"
+          }
+        ]
+      }
+	},
+	"styles": {
+      "typography": { "fontFamily": "var(--wp--preset--font-family--open-sans)" },
+	  "elements": {
+		"link": {
+		  "typography": { "textDecoration": "none" },
+		  "states": {
+			"hover": { "typography": { "textDecoration": "underline" } }
+		  }
+		}
+	  },
+
+	  "blocks": {
+		"core/image":   { "spacing": { "margin": "inherit" } },
+		"core/gallery": { "spacing": { "margin": "inherit" } },
+		"core/table":   { "spacing": { "margin": "inherit" } }
+	  }
+	}
+  }
+  

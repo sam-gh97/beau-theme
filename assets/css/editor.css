@@ -1,0 +1,81 @@
+/* EDITOR-SPECIFIC STYLES */
+
+/* Ensure Tailwind text-primary shows in the block editor (higher specificity there) */
+.editor-styles-wrapper .text-primary,
+.is-editor-preview .text-primary {
+  color: var(--color-primary) !important;
+}
+
+/* GUTENBERG EDITOR STYLES */
+
+/* Main editor wrapper - add proper gutters */
+.editor-styles-wrapper {
+  padding: 1rem !important;
+  max-width: none !important;
+}
+
+/* Block editor content area */
+.editor-styles-wrapper .wp-block-post-content,
+.editor-styles-wrapper .block-editor-block-list__layout {
+  max-width: var(--wp--style--global--content-size);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Individual blocks in editor */
+.editor-styles-wrapper .wp-block {
+  max-width: var(--wp--style--global--content-size);
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Wide blocks in editor */
+.editor-styles-wrapper .wp-block[data-align="wide"] {
+  max-width: var(--wp--style--global--wide-size);
+}
+
+/* Full-width blocks in editor */
+.editor-styles-wrapper .wp-block[data-align="full"] {
+  max-width: none;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+
+/* Custom blocks in editor should respect container widths */
+.editor-styles-wrapper .wp-block-acf-tagged-image-slider,
+.editor-styles-wrapper .wp-block-acf-media-explorer,
+.editor-styles-wrapper .wp-block-acf-text-image,
+.editor-styles-wrapper .wp-block-acf-content-block,
+.editor-styles-wrapper .wp-block-acf-hero-slider,
+.editor-styles-wrapper .wp-block-acf-theme-slider {
+  max-width: var(--wp--style--global--content-size);
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Ensure editor has proper responsive behavior */
+@media (max-width: 768px) {
+  .editor-styles-wrapper {
+    padding: 0.5rem !important;
+  }
+  
+  .editor-styles-wrapper .wp-block-post-content,
+  .editor-styles-wrapper .block-editor-block-list__layout {
+    padding: 0 10px;
+  }
+}
+
+/* Fix editor interface elements */
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container {
+  padding: 1rem;
+}
+
+/* Ensure proper typography inheritance in editor */
+.editor-styles-wrapper {
+  font-family: var(--wp--preset--font-family--open-sans, "Open Sans", sans-serif);
+  line-height: 1.6;
+}
+
+

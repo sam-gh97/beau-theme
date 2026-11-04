@@ -1,0 +1,483 @@
+[data-swiper="products"] .swiper-wrapper {
+    align-items: stretch;
+}
+
+[data-swiper="products"] .swiper-slide {
+    height: auto;
+    display: flex;
+}
+
+[data-swiper="products"] .swiper-slide > * {
+    width: 100%;
+}
+
+/* Product Gallery Slider */
+.product-thumbs-swiper {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-thumbs-swiper::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    z-index: 10;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.product-thumbs-swiper .swiper-wrapper {
+    flex-direction: column;
+}
+
+.product-thumbs-swiper .swiper-slide {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.product-thumbs-swiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.product-gallery-swiper {
+    height: auto;
+}
+
+.product-gallery-swiper .swiper-slide {
+    width: 100%;
+    height: auto;
+}
+
+/* form-login */
+
+.woocommerce-form-login, .woocommerce-ResetPassword, .woocommerce-form-register  {
+    background-color: white;
+    border-radius: 0px !important;
+    border: none !important;
+    padding: var(--spacing-7) !important;
+    margin-top: 0 !important;
+}
+
+.woocommerce-form-login > .form-row label,
+.woocommerce-form-register > .form-row label {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-neutral-900);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.woocommerce-form-login input[type="text"],
+.woocommerce-form-register input[type="text"],
+.woocommerce-form-register input[type="email"],
+.woocommerce-form-login input[type="email"],
+.woocommerce-form-login input[type="password"],
+.woocommerce-form-register input[type="password"],
+.woocommerce-ResetPassword input[type="text"],
+.woocommerce-ResetPassword input[type="email"],
+.woocommerce-ResetPassword input[type="password"] {
+    width: 100%;
+    padding: var(--spacing-2) 0;
+    margin-bottom: var(--spacing-4);
+    font-family: optima-lt-pro, sans-serif !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 400;
+    color: var(--color-neutral-900);
+    background-color: var(--color-neutral-white);
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    transition: border-color 0.2s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+}
+
+.woocommerce-form-login .button,
+.woocommerce-ResetPassword .button,
+.woocommerce-form-register .button {
+    margin-top: var(--spacing-2) !important;
+    padding: var(--spacing-3) var(--spacing-6) !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 400 !important;
+    color: var(--color-neutral-white) !important;
+    background-color: var(--color-neutral-black) !important;
+    border: 1px solid var(--color-neutral-black) !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+}
+
+.lost_password {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: var(--spacing-4);
+}
+
+.woocommerce-form-login .button:hover,
+.woocommerce-ResetPassword .button:hover,
+.woocommerce-form-register .button:hover {
+    background-color: var(--color-neutral-white) !important;
+    color: var(--color-neutral-black) !important;
+    border-color: var(--color-neutral-black) !important;
+}
+
+.woocommerce-privacy-policy-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-neutral-900);
+    margin-top: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
+}
+
+.woocommerce-privacy-policy-text a {
+    text-decoration: underline;
+}
+
+/* Edit Account Form */
+.woocommerce-EditAccountForm {
+    background-color: white;
+    border-radius: 0px !important;
+    border: 1px solid var(--color-neutral-200) !important;
+    padding: var(--spacing-7) !important;
+    margin-top: 0 !important;
+}
+
+.woocommerce-EditAccountForm > .form-row {
+    margin-bottom: 0;
+}
+
+.woocommerce-EditAccountForm > .form-row label {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-neutral-900);
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: var(--spacing-2);
+}
+
+.woocommerce-EditAccountForm input[type="text"],
+.woocommerce-EditAccountForm input[type="email"],
+.woocommerce-EditAccountForm input[type="password"],
+.woocommerce-EditAccountForm .woocommerce-Input,
+.woocommerce-EditAccountForm .input-text {
+    width: 100%;
+    padding: var(--spacing-2) 0;
+    margin-bottom: var(--spacing-4);
+    font-family: optima-lt-pro, sans-serif !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 400;
+    color: var(--color-neutral-900);
+    background-color: var(--color-neutral-white);
+    border: none !important;
+    border-bottom: 1px solid black !important;
+    border-radius: 0 !important;
+    transition: border-color 0.2s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+}
+
+.woocommerce-form-row label {
+    text-transform: uppercase;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 400 !important;
+    color: var(--color-neutral-900) !important;
+    margin-bottom: var(--spacing-2) !important;
+}
+
+.woocommerce-EditAccountForm input[type="text"]:focus,
+.woocommerce-EditAccountForm input[type="email"]:focus,
+.woocommerce-EditAccountForm input[type="password"]:focus,
+.woocommerce-EditAccountForm .woocommerce-Input:focus,
+.woocommerce-EditAccountForm .input-text:focus {
+    outline: none;
+}
+
+.woocommerce-EditAccountForm legend {
+    font-size: 28px;
+    line-height: 41px;
+    font-weight: 400;
+    font-family: "linotype-didot", serif;
+    color: var(--color-neutral-900) !important;
+    padding-top: var(--spacing-4) !important;
+    margin-bottom: var(--spacing-2) !important;
+}
+
+.woocommerce-EditAccountForm .button {
+    margin-top: var(--spacing-6) !important;
+    padding: var(--spacing-3) var(--spacing-6) !important;
+    font-family: optima-lt-pro, sans-serif;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    color: var(--color-neutral-white) !important;
+    background-color: var(--color-neutral-black) !important;
+    border: 1px solid var(--color-neutral-black) !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.woocommerce-EditAccountForm .button:hover {
+    background-color: var(--color-neutral-white) !important;
+    color: var(--color-neutral-black) !important;
+    border-color: var(--color-neutral-black) !important;
+}
+
+.woocommerce-EditAccountForm .button:focus {
+    outline: none;
+}
+
+#account_display_name_description em {
+    font-size: 14px !important;
+}
+
+@media (max-width: 768px) {
+    .woocommerce-ordering, .woocommerce-result-count {
+        float: none !important;
+        width: 100% !important;
+        text-align: left !important;
+        margin-bottom: var(--spacing-4) !important;
+    }
+}
+
+.woocommerce-result-count, form.woocommerce-ordering select {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Product card */
+.product-card {
+    overflow: visible !important;
+}
+
+#wishlist-products,
+.wishlist-wrapper .grid {
+    overflow: visible;
+}
+
+.product-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: black;
+    transform: translateX(-50%);
+    transition: width .25s ease .50s;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.product-card .border-left,
+.product-card .border-right {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 0;
+    background: black;
+    transition: height .25s ease .25s;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.product-card .border-left {
+    left: 0;
+}
+
+.product-card .border-right {
+    right: 0;
+}
+
+.product-card .border-bottom-left,
+.product-card .border-bottom-right {
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    background: black;
+    transition: width .25s ease 0s;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.product-card .border-bottom-left {
+    left: 0;
+}
+
+.product-card .border-bottom-right {
+    right: 0;
+}
+
+@media(min-width: 480px) {
+    .product-card:hover .border-bottom-left,
+    .product-card:hover .border-bottom-right {
+        width: 50%;
+        transition-delay: .50s;
+    }
+
+    .product-card:hover::before {
+        width: 100%;
+        transition-delay: 0s;
+    }
+
+    .product-card:hover .border-left,
+    .product-card:hover .border-right {
+        height: 100%;
+        transition-delay: .25s;
+    }
+}
+
+.woocommerce-password-strength {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: var(--font-optima);
+    font-weight: 400;
+    color: black;
+}
+
+/* MyAccount Navigation */
+.woocommerce-MyAccount-navigation {
+    margin-bottom: var(--spacing-7);
+}
+
+.woocommerce-MyAccount-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--color-neutral-200);
+}
+
+.woocommerce-MyAccount-navigation li {
+    border-bottom: 1px solid var(--color-neutral-200);
+    margin: 0;
+}
+
+.woocommerce-MyAccount-navigation li:last-child {
+    border-bottom: none;
+}
+
+.woocommerce-MyAccount-navigation-link a {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-4) var(--spacing-5);
+    font-family: optima-lt-pro, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--color-neutral-900);
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.woocommerce-MyAccount-navigation-link a:hover {
+    text-decoration: underline;
+}
+
+.woocommerce-MyAccount-navigation-link.is-active a {
+    font-weight: 500;
+    position: relative;
+    padding-right: calc(var(--spacing-5) + 24px);
+}
+
+.woocommerce-MyAccount-navigation-link.is-active a::after {
+    content: '';
+    position: absolute;
+    right: var(--spacing-5);
+    width: 8px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='16' viewBox='0 0 8 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L6 8L2 14' stroke='%23000000' stroke-width='1.5' stroke-linecap='square'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* Wishlist Login Modal */
+.wishlist-modal {
+    animation: fadeIn 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.wishlist-modal-content {
+    animation: slideUp 0.3s ease;
+    border-radius: 0;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.wishlist-modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.ui-btn-outline {
+    display: inline-block;
+    padding: var(--spacing-3) var(--spacing-6);
+    font-family: optima-lt-pro, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-neutral-black);
+    background-color: var(--color-neutral-white);
+    border: 1px solid var(--color-neutral-black);
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    text-decoration: none;
+}
+
+.ui-btn-outline:hover {
+    background-color: var(--color-neutral-black);
+    color: var(--color-neutral-white);
+}
+
+.wishlist-wrapper {
+    background-color: white;
+    padding: var(--spacing-7);
+    border-radius: 0px;
+    border: 1px solid var(--color-neutral-200);
+}

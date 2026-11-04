@@ -1,0 +1,53 @@
+# Node/Vite
+node_modules/
+# dist/
+# .vite/
+.vscode/
+.cursor/
+.DS_Store
+
+# Composer
+/vendor/
+composer.lock
+
+/node_modules
+
+# OS / Editor junk
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+Thumbs.db
+ehthumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# WordPress uploads/cache (if mistakenly placed)
+uploads/
+cache/
+
+# Local dev (optional)
+.env
+.env.*
+local.json
+*.local
+
+# Potential secrets/configuration
+.env*
+*.pem
+*.key
+*.p12
+*.pfx
+wp-config.php
+wp-config-*.php
+
+# AWIN importer integration (private portfolio omission)
+app/Integrations/Awin/
+**/*awin*
+acf-json/group_69600666a0b20.json
+acf-json/group_698133b8af87d.json
+acf-json/group_698143facd219.json
+
+# MacOS specific
+Icon?
