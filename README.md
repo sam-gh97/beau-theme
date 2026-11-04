@@ -1,4 +1,4 @@
-# Beau & Co WordPress Theme
+# Portfolio WordPress Theme
 
 A custom WordPress theme built for a business directory and lifestyle publication, with WooCommerce support and a modern component-based frontend.
 
